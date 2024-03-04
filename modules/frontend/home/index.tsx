@@ -1,6 +1,4 @@
 import React from "react";
-import HomeHeroTwo from "./@components/home-hero-two";
-import ProgramCaresoul from "./@components/program-carousel";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "./@components/home-hero-two";
@@ -67,7 +65,6 @@ const Home = () => {
                         width={275}
                         height={340}
                         className="object-cover h-full"
-                        // src="/images/img-placeholder-big.webp"
                       />
                     </div>
                   </div>

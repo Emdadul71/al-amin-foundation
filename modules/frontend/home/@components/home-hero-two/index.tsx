@@ -24,7 +24,7 @@ const HomeHero = () => {
                 ipsa.
               </div>
               <Link
-                href="/counsellors"
+                href="#"
                 className="btn btn-secondary hover:bg-[#e15d18] hover:border-[#e15d18]"
               >
                 DONATE
