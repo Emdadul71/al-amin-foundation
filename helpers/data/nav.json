@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Home",
+    "link": "/"
+  },
+  {
+    "title": "About Us",
+    "link": "/about-us"
+  },
+  {
+    "title": "Programs",
+    "link": "/programs"
+  },
+  {
+    "title": "Zakat Calculator",
+    "link": "https://zakatcalculator.co.uk/"
+  },
+  {
+    "title": "Islamic Wall",
+    "link": "/islamic-wall"
+  },
+  {
+    "title": "Contact Us",
+    "link": "/contact-us"
+  }
+]
