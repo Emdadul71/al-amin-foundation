@@ -5,7 +5,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 const HomeHero = () => {
   return (
     <section>
-      <div className="min-h-[calc(100vh-64px)] lg:min-h-[calc(100vh-75px)] relative bg-[url('/images/test.jpg')] bg-center bg-no-repeat bg-cover">
+      <div className="min-h-[calc(100vh-68px)] lg:min-h-[calc(100vh-75px)] relative bg-[url('/images/test.jpg')] bg-center bg-no-repeat bg-cover">
         <div
           className="overlay w-full h-full absolute left-0 top-0 z-1"
           // style={{
