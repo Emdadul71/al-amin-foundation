@@ -22,7 +22,7 @@ const programsData = [
     slug: "",
   },
   {
-    ImgSrc: "/misc/homeless.jpg",
+    ImgSrc: "/misc/teaching-quran.jpg",
     title: "Teaching Quran",
     slug: "",
   },
