@@ -3,6 +3,7 @@ import HomeHeroTwo from "./@components/home-hero-two";
 import ProgramCaresoul from "./@components/program-carousel";
 import Image from "next/image";
 import Link from "next/link";
+import HomeHero from "./@components/home-hero-two";
 
 const programsData = [
   { ImgSrc: "/misc/foodbank.jpeg", title: "Food Bank", slug: "#" },
@@ -30,7 +31,7 @@ const programsData = [
 const Home = () => {
   return (
     <>
-      <HomeHeroTwo />
+      <HomeHero />
 
       <section>
         <div className="container">

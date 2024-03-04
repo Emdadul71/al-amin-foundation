@@ -14,7 +14,7 @@ const HomeHero = () => {
           // }}
         ></div>
         <div className="max-w-[1020px] px-5 mx-auto min-h-[calc(100vh-64px)] lg:min-h-[calc(100vh-75px)] text-white relative z-10 ">
-          <div className="w-full absolute left-0 bottom-[10vh] md:bottom-[25vh]">
+          <div className="w-full absolute left-0 bottom-[25vh]">
             <div className="max-w-full lg:max-w-[570px] p-4 lg:p-0 text-center lg:text-left">
               <h1 className="mb-3 text-white">
                 Unleashing Compassion: Impacting Lives Daily.
