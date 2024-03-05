@@ -61,7 +61,7 @@ const Header = () => {
         <div className="container">
           <div className="grid grid-cols-[1fr_auto] lg:grid-cols-[230px_auto_auto] justify-between items-center relative">
             <div>
-              <div className="absolute top-0 left-0 hidden lg:block">
+              <div className="absolute top-0 left-0 hidden lg:block ">
                 <Link href="/">
                   <Image
                     src="/misc/logo-header.jpg"

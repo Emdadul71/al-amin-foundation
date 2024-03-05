@@ -1,9 +1,12 @@
 import React from "react";
+import OurMission from "./@components/our-mission";
+import OurStory from "./@components/our-story";
+import CoreValues from "./@components/core-values";
 
 const AboutUs = () => {
   return (
     <>
-      <section className="pt-5 lg:pt-[80px] bg-grey mb-5 lg:mb-[80px]">
+      <section className="pt-8 lg:pt-[80px]">
         <div className="container">
           <div className="max-w-[870px] mx-auto w-full">
             <div className="flex flex-col justify-center ">
@@ -18,13 +21,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="py-[150px]">
-            <h2 className="text-center">This Page is Under Constraction...</h2>
-          </div>
-        </div>
-      </section>
+      <OurStory />
+      <OurMission />
+      <CoreValues />
     </>
   );
 };
