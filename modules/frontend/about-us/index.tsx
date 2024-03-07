@@ -2,6 +2,8 @@ import React from "react";
 import OurMission from "./@components/our-mission";
 import OurStory from "./@components/our-story";
 import CoreValues from "./@components/core-values";
+import Testimonials from "../@components/testimonials";
+import BlogSection from "../@components/blog_section";
 
 const AboutUs = () => {
   return (
@@ -22,8 +24,10 @@ const AboutUs = () => {
         </div>
       </section>
       <OurStory />
-      <OurMission />
+      {/* <OurMission /> */}
       <CoreValues />
+      <Testimonials />
+      <BlogSection />
     </>
   );
 };

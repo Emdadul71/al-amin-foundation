@@ -3,7 +3,7 @@ import React from "react";
 
 const OurStory = () => {
   return (
-    <section className="lg:pt-[80px] relative">
+    <section className="lg:pt-[80px] lg:mb-[80px] relative">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_810px] gap-[30px]">
           <h2 className="mt-8 heading-one text-secondary">

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "./@components/home-hero-two";
+import BlogSection from "../@components/blog_section";
 
 const programsData = [
   { ImgSrc: "/misc/foodbank.jpeg", title: "Food Bank", slug: "#" },
@@ -74,6 +75,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <BlogSection />
     </>
   );
 };
