@@ -8,7 +8,7 @@ import BlogSection from "../@components/blog_section";
 const AboutUs = () => {
   return (
     <>
-      <section className="pt-8 lg:pt-[80px] bg-[#1D1C20]">
+      <section className="pt-8 lg:pt-[80px] bg-[#FBFDFF]">
         <div className="container">
           <div className="max-w-[870px] mx-auto w-full">
             <div className="flex flex-col justify-center ">
