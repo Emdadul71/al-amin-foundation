@@ -230,3 +230,41 @@
   outline: 0;
   width: 100%;
 }
+
+.contact-map {
+  .map {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+  .address {
+    max-width: 450px;
+    background-color: #ffffff;
+    justify-self: flex-end;
+    width: 100%;
+    padding: 50px;
+    pointer-events: all;
+  }
+  .location {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-map {
+    .map {
+      grid-column: unset;
+      grid-row: unset;
+    }
+    .address {
+      background-color: #ffffff;
+      justify-content: center;
+      max-width: 100%;
+    }
+    .location {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+}

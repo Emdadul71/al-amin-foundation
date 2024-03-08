@@ -22,7 +22,7 @@ const IslamicWallPage = () => {
       <section>
         <div className="container">
           <div className="py-[150px]">
-            <h2 className="text-center">This Page is Under Constraction...</h2>
+            <h2 className="text-center">This Page is Under Construction...</h2>
           </div>
         </div>
       </section>
