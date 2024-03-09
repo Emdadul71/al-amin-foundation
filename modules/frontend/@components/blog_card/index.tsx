@@ -23,8 +23,7 @@ const BlogCard = ({ classes, item }: propTypes) => {
   return (
     // <div className={styles.blog_card_wrapper}>
     <Link
-      // href={`/blog/${item?.slug}`}
-      href="#"
+      href={`/islamic-wall/details`}
       className={`${
         styles.blog_card_wrapper
       } group hover:text-inherit h-full grid  ${
@@ -68,7 +67,7 @@ const BlogCard = ({ classes, item }: propTypes) => {
         </h3>
 
         <div
-          className={` line-clamp-2  mb-5 ${
+          className={` line-clamp-3  mb-5 ${
             classes?.description ? classes.description : ""
           }`}
         >

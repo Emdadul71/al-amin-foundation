@@ -86,49 +86,51 @@ const blogData = [
 ];
 const LatestBlog = () => {
   return (
-    <section>
-      <div className="container">
-        <div className="flex justify-between items-center mb-[40px]">
-          <h2 className="h3 mb-0 text-primary">Latest Blogs</h2>
-          <p className="mb-0">View All</p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-5">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-[30px]">
-            {blogData?.map((item: any, i: any) => {
-              const isSmall = i == 2 || i == 3 || i == 4 || i == 5;
-              return (
-                <>
-                  <BlogCard
-                    key={i}
-                    item={item}
-                    classes={{
-                      root: `${
-                        i > 5
-                          ? `lg:grid-cols-[410px_1fr] lg:col-span-2 items-center gap-5`
-                          : `gap-3`
-                      } ${
-                        isSmall
-                          ? `lg:grid-cols-[146px_1fr] col-span-1 gap-3 items-center `
-                          : ``
-                      }`,
+    <div>
+      <div className="flex justify-between items-center mb-[40px]">
+        <h2 className="h3 mb-0 text-primary">Latest Blogs</h2>
+        <p className="mb-0">View All</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-5">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-[30px]">
+          {blogData?.map((item: any, i: any) => {
+            const isSmall = i == 2 || i == 3 || i == 4 || i == 5;
+            const isTrue = i == 0 || i == 1;
+            return (
+              <>
+                <BlogCard
+                  key={i}
+                  item={item}
+                  classes={{
+                    root: `${
+                      i > 5
+                        ? `lg:grid-cols-[410px_1fr] lg:col-span-2 items-center gap-5`
+                        : `gap-3`
+                    } ${
+                      isSmall
+                        ? `lg:grid-cols-[146px_1fr] col-span-1 gap-3 items-center `
+                        : ``
+                    }`,
 
-                      imageWrapper: isSmall ? "!h-full" : "",
-                      author: isSmall ? "!mb-1" : "",
-                      imageStyle: isSmall ? "!h-full" : "",
-                      title: isSmall ? "!text-sm !mb-1" : "!text-2xl",
-                      reading: isSmall ? "!text-xs" : "",
-                      description: isSmall ? "!hidden" : "",
-                    }}
-                  />
-                  {i == 5 && <div className="h-[20px]"></div>}
-                </>
-              );
-            })}
-          </div>
-          <div></div>
+                    imageWrapper: isSmall ? "!h-full" : "",
+                    author: isSmall ? "!mb-1" : "",
+                    imageStyle: isSmall ? "!h-full" : "",
+                    title: isSmall ? "!text-sm !mb-1" : "!text-2xl",
+                    reading: isSmall ? "!text-xs" : "",
+                    description: isSmall
+                      ? "!hidden"
+                      : isTrue
+                      ? "!line-clamp-2"
+                      : "",
+                  }}
+                />
+                {i == 5 && <div className="h-[20px]"></div>}
+              </>
+            );
+          })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

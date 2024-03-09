@@ -6,7 +6,14 @@ const IslamicWall = () => {
   return (
     <>
       <BlogHero />
-      <LatestBlog />
+      <section>
+        <div className="container">
+          <div className="grid grid-cols-[1fr_300px] gap-[30px]">
+            <LatestBlog />
+            <div></div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

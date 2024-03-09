@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "./@components/home-hero-two";
 import BlogSection from "../@components/blog_section";
+import Testimonials from "../@components/testimonials";
 
 const programsData = [
   { ImgSrc: "/misc/foodbank.jpeg", title: "Food Bank", slug: "#" },
@@ -75,7 +76,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <BlogSection />
+      <Testimonials />
+      <BlogSection classes={{ root: "pt-5 lg:pt-[80px]" }} />
     </>
   );
 };

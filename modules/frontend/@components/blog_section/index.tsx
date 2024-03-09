@@ -48,7 +48,7 @@ const BlogSection = ({ classes }: propTypes) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-[30px]">
           {blogData?.slice(0, 3)?.map((item: any, i: number) => {
-            return <BlogCard item={item} key={i} />;
+            return <BlogCard item={item} key={i} classes={{ root: "gap-3" }} />;
           })}
         </div>
       </div>
