@@ -41,10 +41,7 @@ const ContactMap = () => {
                     <BiPhoneCall />
                   </div>
                   <div>
-                    <a
-                      href="tel:+8801818193628"
-                      className="w-[187px] dark:text-white"
-                    >
+                    <a href="tel:+8801818193628" className="w-[187px] ">
                       +8801818193628
                     </a>
                   </div>
@@ -54,9 +51,7 @@ const ContactMap = () => {
                     <HiOutlineMail />
                   </div>
                   <div>
-                    <p className="w-[187px] dark:text-white">
-                      info@alaminfoundation.com
-                    </p>
+                    <p className="w-[187px] mb-0">info@alaminfoundation.com</p>
                   </div>
                 </div>
               </div>

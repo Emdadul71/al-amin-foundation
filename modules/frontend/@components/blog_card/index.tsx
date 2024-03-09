@@ -12,74 +12,90 @@ interface propTypes {
     description?: string;
     imageWrapper?: string;
     image?: string;
+    imageStyle?: string;
+    author?: string;
+    reading?: string;
   };
   item?: any;
 }
 
 const BlogCard = ({ classes, item }: propTypes) => {
   return (
-    <div className={styles.blog_card_wrapper}>
-      <Link
-        // href={`/blog/${item?.slug}`}
-        href="#"
-        className="group hover:text-inherit h-full grid grid-rows-[auto_1fr]"
+    // <div className={styles.blog_card_wrapper}>
+    <Link
+      // href={`/blog/${item?.slug}`}
+      href="#"
+      className={`${
+        styles.blog_card_wrapper
+      } group hover:text-inherit h-full grid  ${
+        classes?.root ? classes.root : ""
+      }`}
+    >
+      <div
+        className={`block w-full  ${
+          classes?.imageWrapper ? classes.imageWrapper : ""
+        }`}
       >
+        <Image
+          src={item?.featureImage}
+          alt={item?.title}
+          width={960}
+          height={540}
+          className={`w-full h-full object-cover rounded-md scale-100	group-hover:scale-[1.04] transition-all duration-500 ${
+            classes?.imageStyle ? classes.imageStyle : ""
+          }`}
+        />
+      </div>
+      <div className="flex flex-col">
         <div
-          className={`block w-full mb-6 max-h-[400px] ${
-            classes?.imageWrapper ? classes.imageWrapper : ""
+          className={`flex items-center gap-2 text-sm mb-2 ${
+            classes?.author ? classes.author : ""
           }`}
         >
-          <Image
-            src={item?.featureImage}
-            alt={item?.title}
-            width={960}
-            height={540}
-            blurDataURL="/images/misc/image-placeholder-big.webp"
-            placeholder="blur"
-            className="w-full h-full object-cover rounded-md scale-100	group-hover:scale-[1.04] transition-all duration-500"
-          />
+          <span className="block text-black font-bold">Admin</span>
+          <span className="w-[6px] h-[6px] rounded-full bg-secondary block"></span>
+          <span>
+            {item?.publishedAt && moment(item?.publishedAt).format("LL")}
+          </span>
         </div>
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2 text-sm mb-2">
-            <span className="block text-black font-bold">Admin</span>
-            <span className="w-[6px] h-[6px] rounded-full bg-secondary block"></span>
-            <span>
-              {item?.publishedAt && moment(item?.publishedAt).format("LL")}
-            </span>
-          </div>
 
-          <h3
-            className={`heading-five mb-2 transition-all line-clamp-2 group-hover:text-secondary transition-all ${
-              classes?.title ? classes.title : ""
+        <h3
+          className={`heading-five mb-2 transition-all line-clamp-2 group-hover:text-secondary transition-all ${
+            classes?.title ? classes.title : ""
+          }`}
+        >
+          {item?.title}
+        </h3>
+
+        <div
+          className={` line-clamp-2  mb-5 ${
+            classes?.description ? classes.description : ""
+          }`}
+        >
+          {excerpt(item?.content, 400)}
+        </div>
+
+        {/* <div className="flex items-center gap-4 mt-auto group-hover:text-secondary transition-all"> */}
+        <div className="flex items-center gap-4  group-hover:text-secondary transition-all">
+          <span
+            className={`${styles.left_arrow} inline-block w-[22px] h-[2px] bg-black`}
+          ></span>
+          <span
+            className={`${
+              styles.continue_reading
+            } inline-block text-sm text-black font-bold ${
+              classes?.reading ? classes.reading : ""
             }`}
           >
-            {item?.title}
-          </h3>
-
-          <div
-            className={`line-clamp-2  mb-5 ${
-              classes?.description ? classes.description : ""
-            }`}
-          >
-            {excerpt(item?.content, 400)}
-          </div>
-
-          <div className="flex items-center gap-4 mt-auto group-hover:text-secondary transition-all">
-            <span
-              className={`${styles.left_arrow} inline-block w-[22px] h-[2px] bg-black`}
-            ></span>
-            <span
-              className={`${styles.continue_reading} inline-block text-sm text-black font-bold`}
-            >
-              CONTINUE READING
-            </span>
-            <span className={`${styles.right_arrow}`}>
-              <BsArrowRight className="inline-block text-2xl" />
-            </span>
-          </div>
+            CONTINUE READING
+          </span>
+          <span className={`${styles.right_arrow}`}>
+            <BsArrowRight className="inline-block text-2xl" />
+          </span>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
+    // </div>
   );
 };
 
