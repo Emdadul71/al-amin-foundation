@@ -92,7 +92,7 @@ const LatestBlog = () => {
           <h2 className="h3 mb-0 text-primary">Latest Blogs</h2>
           <p className="mb-0">View All</p>
         </div>
-        <div className="grid grid-cols-[1fr_300px] gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-5">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-[30px]">
             {blogData?.map((item: any, i: any) => {
               const isSmall = i == 2 || i == 3 || i == 4 || i == 5;

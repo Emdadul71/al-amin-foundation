@@ -50,9 +50,9 @@ const blogData = [
 ];
 const BlogHero = () => {
   return (
-    <section className="pt-[120px]">
+    <section className="pt-5 lg:pt-[120px]">
       <div className="container">
-        <div className="grid grid-cols-4 gap-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-[30px]">
           {blogData?.map((item: any, i: any) => {
             const isSecond = i == 1;
             return (
@@ -61,10 +61,10 @@ const BlogHero = () => {
                 item={item}
                 classes={{
                   root: `!grid-cols-1 gap-4 ${
-                    isSecond ? "!col-span-2 !row-span-2 self-start" : ""
+                    isSecond ? "lg:!col-span-2 lg:!row-span-2 self-start" : ""
                   }`,
                   title: isSecond ? "!text-2xl" : "",
-                  description: isSecond ? "!line-clamp-4" : "!hidden",
+                  description: isSecond ? "!line-clamp-4" : "lg:!hidden",
                 }}
               />
             );
