@@ -33,7 +33,7 @@ const ProgramsLanding = () => {
       <section className="pt-5 lg:py-[150px] bg-grey mb-[80px]">
         <div className="container">
           <div>
-            <h1 className="mb-3 text-secondary text-center">Food Bank</h1>
+            <h1 className="mb-3 text-secondary text-center">Our Programs</h1>
             <div className="flex justify-center gap-2 text-center ">
               <Link href="/" className=" hover:text-secondary">
                 Home

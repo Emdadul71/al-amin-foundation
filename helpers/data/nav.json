@@ -9,7 +9,23 @@
   },
   {
     "title": "Programs",
-    "link": "/programs"
+    "link": "/programs",
+    "children": [
+      { "title": "Food Bank", "link": "/programs/food-bank" },
+      {
+        "title": "Providing For Orphan",
+        "link": "/programs/providing-for-orphan"
+      },
+      {
+        "title": "Maternity Assistance Project",
+        "link": "/programs/maternity-assistance-project"
+      },
+      {
+        "title": "Homeless Assistance Project",
+        "link": "/programs/homeless-assistance-project"
+      },
+      { "title": "Teaching Quran", "link": "/programs/teaching-quran" }
+    ]
   },
   {
     "title": "Zakat Calculator",

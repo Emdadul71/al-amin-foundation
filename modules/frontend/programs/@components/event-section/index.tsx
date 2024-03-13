@@ -64,17 +64,22 @@ const EventSection = ({ classes }: propTypes) => {
   // }, [dataArray]);
   return (
     <section
-      className={`pt-8 mb-8 lg:pt-[80px] lg:mb-[80px]  ${
+      className={`pt-5 mb-8 lg:mb-[80px]  ${
         classes?.root ? classes?.root : ""
       }`}
     >
-      <div className={`max-w-[1170px] w-full mx-auto`}>
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]`}
-        >
-          {programsData?.map((item: any, i: number) => {
-            return <EventCard item={item} key={i} />;
-          })}
+      <div className="container">
+        <div className="max-w-[500px] mx-auto mb-10">
+          <h2 className="text-center text-secondary">Successful Events</h2>
+        </div>
+        <div className={`max-w-[1170px] w-full mx-auto`}>
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]`}
+          >
+            {programsData?.map((item: any, i: number) => {
+              return <EventCard item={item} key={i} />;
+            })}
+          </div>
         </div>
       </div>
     </section>
