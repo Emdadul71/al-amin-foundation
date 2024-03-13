@@ -32,7 +32,6 @@ const Home = () => {
   return (
     <>
       <HomeHero />
-
       <section>
         <div className="container">
           <div className="max-w-[730px] mx-auto">

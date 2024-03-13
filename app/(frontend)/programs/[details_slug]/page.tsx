@@ -1,7 +1,8 @@
+import ProgramsList from "@/modules/frontend/programs/landing";
 import React from "react";
 
 const ProgramDetails = () => {
-  return <div>ProgramDetails</div>;
+  return <ProgramsList />;
 };
 
 export default ProgramDetails;
