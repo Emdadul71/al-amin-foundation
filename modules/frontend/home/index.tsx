@@ -43,7 +43,11 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {programsData?.map((item: any, i: any) => {
               return (
-                <Link href="#" className="industry_link" key={i}>
+                <Link
+                  href="/programs/program-name"
+                  className="industry_link"
+                  key={i}
+                >
                   <div className="industry_card">
                     <div className="overlay"></div>
 
