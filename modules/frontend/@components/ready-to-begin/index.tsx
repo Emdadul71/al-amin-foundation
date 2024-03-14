@@ -9,7 +9,7 @@ const ReadyToBegin = ({ data }: any) => {
     <section className="relative pb-[80px]">
       {/* <div className="bg-[url('/misc/mission-bg.png')] bg-no-repeat absolute -top-[50px] lg:left-[200px] w-[600px] h-[600px] -z-[100] hidden lg:block"></div> */}
       <div className="container">
-        <div className="max-w-[1170px] mx-auto grid grid-cols-2 items-center gap-[30px]">
+        <div className="max-w-[1170px] mx-auto grid lg:grid-cols-2 items-center gap-[30px]">
           <div className="h-[400px]">
             <Image
               src="/images/test.jpg"
