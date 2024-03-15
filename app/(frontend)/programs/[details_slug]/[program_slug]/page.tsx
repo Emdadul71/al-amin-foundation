@@ -1,7 +1,8 @@
+import ProgramsDetails from "@/modules/frontend/programs/details/page";
 import React from "react";
 
 const PDetails = () => {
-  return <div>PDetails</div>;
+  return <ProgramsDetails />;
 };
 
 export default PDetails;

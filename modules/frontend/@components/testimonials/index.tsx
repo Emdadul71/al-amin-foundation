@@ -167,7 +167,7 @@ const Testimonials = ({ classes }: propTypes) => {
     <>
       {total > 0 ? (
         <section
-          className={`pt-8 lg:pt-[70px] pb-2 lg:pb-[90px] bg-grey overflow-hidden ${
+          className={`pt-8 lg:pt-[70px] pb-2 lg:pb-[90px] bg-grey overflow-hidden mb-5 lg:mb-[80px] ${
             classes?.root ? classes?.root : ""
           }`}
         >

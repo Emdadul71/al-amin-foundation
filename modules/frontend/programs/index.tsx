@@ -62,13 +62,6 @@ const ProgramsLanding = () => {
                     <div className="overlay"></div>
 
                     <div className="industry_card_content">
-                      {/* {item?.iconSrc && (
-              <ReactSVG
-                src={item?.iconSrc}
-                className={`industry_card_icon industry_card_icon `}
-              />
-            )} */}
-
                       <div className={`industry_card_text  industry_card_text`}>
                         {item?.title}
                       </div>
