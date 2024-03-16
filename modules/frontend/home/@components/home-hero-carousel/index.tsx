@@ -47,7 +47,7 @@ const HomeHeroCarousel = () => {
   return (
     <>
       <section className="py-[80px] bg-[url('/hero-image-blurr.jpg')] min-h-screen bg-no-repeat bg-center bg-cover">
-        <div className="container mx-auto pt-[150px]">
+        <div className="container mx-auto pt-[50px] lg:pt-[150px]">
           <div>
             <Carousel
               plugins={[
