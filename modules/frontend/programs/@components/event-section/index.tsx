@@ -6,6 +6,7 @@ interface propTypes {
   classes?: object | any;
   showItem?: number;
   isRecent?: boolean;
+  title?: string;
 }
 
 const programsData = [
@@ -39,7 +40,7 @@ const programsData = [
   },
 ];
 
-const EventSection = ({ classes }: propTypes) => {
+const EventSection = ({ classes, title }: propTypes) => {
   const limit = 6;
   const [page, setPage] = useState(1);
   const [moreData, setMoreData] = useState<any>([]);
@@ -69,8 +70,8 @@ const EventSection = ({ classes }: propTypes) => {
       }`}
     >
       <div className="container">
-        <div className="max-w-[500px] mx-auto mb-10">
-          <h2 className="text-center text-secondary">Successful Events</h2>
+        <div className="max-w-[700px] mx-auto mb-10">
+          <h2 className="text-center text-secondary">{title}</h2>
         </div>
         <div className={`max-w-[1170px] w-full mx-auto`}>
           <div

@@ -8,7 +8,7 @@ const ProgramsList = () => {
     <>
       <EventHero />
       <ReadyToBegin />
-      <EventSection />
+      <EventSection title="Successful Events" />
     </>
   );
 };
