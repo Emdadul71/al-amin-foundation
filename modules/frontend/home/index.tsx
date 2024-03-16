@@ -1,9 +1,9 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "./@components/home-hero-two";
 import BlogSection from "../@components/blog_section";
 import Testimonials from "../@components/testimonials";
+import HomeHeroCarousel from "./@components/home-hero-carousel";
 
 const programsData = [
   { ImgSrc: "/misc/foodbank.jpeg", title: "Food Bank", slug: "#" },
@@ -31,7 +31,8 @@ const programsData = [
 const Home = () => {
   return (
     <>
-      <HomeHero />
+      {/* <HomeHero /> */}
+      {/* <HomeHeroCarousel /> */}
       <section>
         <div className="container">
           <div className="max-w-[730px] mx-auto">

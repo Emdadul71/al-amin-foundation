@@ -1,29 +1,15 @@
 "use client";
-import {
-  Button,
-  Divider,
-  Drawer,
-  DrawerProps,
-  RadioChangeEvent,
-  Select,
-  Space,
-} from "antd";
-import { Fragment, useEffect, useState } from "react";
-import { CiClock2 } from "react-icons/ci";
-import { FaMobileAlt, FaRegMap } from "react-icons/fa";
-import { CgMenu } from "react-icons/cg";
-import { HiOutlineEnvelope } from "react-icons/hi2";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import Image from "next/image";
-import styles from "./header.module.scss";
-import useScrollEffect from "@/hooks/use-scroll-effect";
-
-import dataBurgerMenu from "@/helpers/data/burger-nav.json";
 import navData from "@/helpers/data/nav.json";
-import { insert } from "@/helpers/utils";
-import SocialLinks from "../../@components/social_links";
+import useScrollEffect from "@/hooks/use-scroll-effect";
+import { Drawer, DrawerProps, RadioChangeEvent } from "antd";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Fragment, useEffect, useState } from "react";
+import { CgMenu } from "react-icons/cg";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import HomeHeroCarousel from "../../home/@components/home-hero-carousel";
+import styles from "./header.module.scss";
 
 const Header = () => {
   const [address, setAddress] = useState("sydey");
@@ -51,13 +37,38 @@ const Header = () => {
     setSelected(i);
   };
 
+  const [scroll, setScroll] = useState(false);
   const path = usePathname();
+
+  // Scroll Efect
+
+  useEffect(() => {
+    const handleScroll = () => {
+      //   console.log("window.scrollY", window.scrollY);
+
+      if (window.scrollY > 40) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Scroll Efect
 
   return (
     <>
-      <section className="bg-white  z-50 pb-0 sticky top-0">
+      <section
+        className={`fixed top-0  left-0 w-full z-50 pb-0  ${
+          scroll ? "bg-white" : "bg-transparent"
+        }`}
+      >
         <div className="container">
           <div className="grid grid-cols-[1fr_auto] lg:grid-cols-[230px_auto_auto] justify-between items-center relative">
             <div>
@@ -109,9 +120,11 @@ const Header = () => {
                       return (
                         <li
                           key={index}
-                          className={`relative text-black border-b-[3px] border-transparent hover:border-b-[3px] hover:border-secondary ${
-                            styles.has_submenu
-                          } ${p ? "border-secondary text-secondary" : ""}`}
+                          className={`relative  border-b-[3px] border-transparent hover:border-b-[3px] hover:border-secondary ${
+                            path == "/" ? "text-white" : "!text-black"
+                          } ${styles.has_submenu} ${
+                            p ? "border-secondary !text-secondary" : ""
+                          } ${scroll ? "!text-black" : ""}`}
                         >
                           {item?.link ? (
                             <Link
@@ -351,6 +364,7 @@ const Header = () => {
           </div>
         </div>
       </Drawer>
+      {path == "/" && <HomeHeroCarousel />}
     </>
   );
 };
