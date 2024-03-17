@@ -65,9 +65,9 @@ const Header = () => {
   return (
     <>
       <section
-        className={`fixed top-0  left-0 w-full z-50 pb-0  ${
-          scroll ? "bg-white" : "bg-transparent"
-        }`}
+        className={` top-0  left-0 w-full z-50 pb-0 ${
+          path == "/" ? "fixed" : "sticky"
+        }  ${scroll ? "bg-white" : "bg-transparent"}`}
       >
         <div className="container">
           <div className="grid grid-cols-[1fr_auto] lg:grid-cols-[230px_auto_auto] justify-between items-center relative">
@@ -251,7 +251,12 @@ const Header = () => {
             )}
 
             <div className="flex items-center gap-4">
-              <Link href="/contact-us" className="btn btn-primary rounded-md">
+              <Link
+                href="/contact-us"
+                className={`btn  btn-primary rounded-md ${
+                  path == "/" && !scroll ? "btn-white" : ""
+                }`}
+              >
                 DONATE
               </Link>
               <div className="block lg:hidden order-2">
@@ -259,7 +264,11 @@ const Header = () => {
                   className={`text-2xl mt-1`}
                   onClick={() => setOpen(true)}
                 >
-                  <CgMenu />
+                  <CgMenu
+                    className={`!text-primary ${
+                      path == "/" && !scroll ? "!text-white" : ""
+                    }`}
+                  />
                 </button>
               </div>
             </div>

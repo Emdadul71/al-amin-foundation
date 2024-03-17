@@ -46,8 +46,8 @@ const data = [
 const HomeHeroCarousel = () => {
   return (
     <>
-      <section className="py-[80px] bg-[url('/hero-image-blurr.jpg')] min-h-screen bg-no-repeat bg-center bg-cover">
-        <div className="container mx-auto pt-[50px] lg:pt-[150px]">
+      <section className="py-[80px] bg-[url('/hero-image-blurr.jpg')] min-h-screen bg-no-repeat bg-center bg-cover mb-5 lg:mb-[80px]">
+        <div className="container mx-auto pt-[50px] lg:pt-[170px]">
           <div>
             <Carousel
               plugins={[
@@ -60,17 +60,21 @@ const HomeHeroCarousel = () => {
                 {data?.map((item) => {
                   return (
                     <CarouselItem key={item?.id}>
-                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] px-3 gap-10 items-center text-white">
-                        <div className="order-2 lg:order-1">
-                          <h1 className="mb-5 text-[50px] leading-[1.2] font-bold text-white">
+                      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr]  gap-5 lg:gap-10 items-center text-white">
+                        <div className="order-2 md:order-1">
+                          <h1 className="mb-5 heading-two  font-bold text-white text-center md:text-start">
                             {item?.headig}
                           </h1>
-                          <p className="mb-6">{item?.excerpt}</p>
-                          <Button variant="destructive">
-                            <Link href="#">Donate</Link>
-                          </Button>
+                          <p className="mb-6 text-center md:text-start">
+                            {item?.excerpt}
+                          </p>
+                          <div className="flex justify-center w-full">
+                            <Button variant="destructive">
+                              <Link href="#">Donate</Link>
+                            </Button>
+                          </div>
                         </div>
-                        <div className="order-1 lg:order-2">
+                        <div className="order-1 md:order-2">
                           <Image
                             src={item?.imageSrc}
                             width={1536}
