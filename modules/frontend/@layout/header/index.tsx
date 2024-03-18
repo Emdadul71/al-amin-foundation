@@ -81,7 +81,7 @@ const Header = () => {
                         ? "/misc/logo-transparent.png"
                         : "/misc/logo-header.jpg"
                     } `}
-                    alt="AL Amin Foundation"
+                    alt="Logo"
                     width={isScrollApplicable ? 132 : 240}
                     height={128}
                     className={`transition-all duration-500 ${
