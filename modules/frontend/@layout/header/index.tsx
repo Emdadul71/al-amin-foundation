@@ -12,8 +12,9 @@ import HomeHeroCarousel from "../../home/@components/home-hero-carousel";
 import styles from "./header.module.scss";
 
 const Header = () => {
-  const [address, setAddress] = useState("sydey");
   const isScrollApplicable = useScrollEffect();
+  console.log("isScrollApplicable", isScrollApplicable);
+
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<DrawerProps["placement"]>("left");
 
@@ -37,28 +38,28 @@ const Header = () => {
     setSelected(i);
   };
 
-  const [scroll, setScroll] = useState(false);
+  // const [scroll, setScroll] = useState(false);
   const path = usePathname();
 
   // Scroll Efect
 
-  useEffect(() => {
-    const handleScroll = () => {
-      //   console.log("window.scrollY", window.scrollY);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     //   console.log("window.scrollY", window.scrollY);
 
-      if (window.scrollY > 40) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
+  //     if (window.scrollY > 40) {
+  //       setScroll(true);
+  //     } else {
+  //       setScroll(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   // Scroll Efect
 
@@ -67,28 +68,38 @@ const Header = () => {
       <section
         className={` top-0  left-0 w-full z-50 pb-0 ${
           path == "/" ? "fixed" : "sticky"
-        }  ${scroll ? "bg-white" : "bg-transparent"}`}
+        }  ${isScrollApplicable ? "bg-white" : "bg-transparent"}`}
       >
         <div className="container">
           <div className="grid grid-cols-[1fr_auto] lg:grid-cols-[230px_auto_auto] justify-between items-center relative">
             <div>
-              <div className="absolute top-0 left-0 hidden lg:block ">
+              <div className={`absolute top-0 left-0 hidden lg:block `}>
                 <Link href="/">
                   <Image
-                    src="/misc/logo-header.jpg"
+                    src={`${
+                      path == "/"
+                        ? "/misc/logo-transparent.png"
+                        : "/misc/logo-header.jpg"
+                    } `}
                     alt="AL Amin Foundation"
                     width={isScrollApplicable ? 132 : 240}
                     height={128}
-                    className="transition-all duration-500"
+                    className={`transition-all duration-500 ${
+                      isScrollApplicable ? "!opacity-0" : ""
+                    }`}
                   />
                 </Link>
               </div>
-              <Link href="/">
+              <Link
+                href="/"
+                className={`${isScrollApplicable ? "" : "hidden"}`}
+              >
                 <Image
                   src="/misc/logo-header.jpg"
                   alt="AL Amin Foundation"
                   width={120}
                   height={50}
+                  className="z-50"
                 />
               </Link>
             </div>
@@ -124,7 +135,7 @@ const Header = () => {
                             path == "/" ? "text-white" : "!text-black"
                           } ${styles.has_submenu} ${
                             p ? "border-secondary !text-secondary" : ""
-                          } ${scroll ? "!text-black" : ""}`}
+                          } ${isScrollApplicable ? "!text-black" : ""}`}
                         >
                           {item?.link ? (
                             <Link
@@ -254,7 +265,7 @@ const Header = () => {
               <Link
                 href="/contact-us"
                 className={`btn  btn-primary rounded-md ${
-                  path == "/" && !scroll ? "btn-white" : ""
+                  path == "/" && !isScrollApplicable ? "btn-white" : ""
                 }`}
               >
                 DONATE
@@ -266,7 +277,7 @@ const Header = () => {
                 >
                   <CgMenu
                     className={`!text-primary ${
-                      path == "/" && !scroll ? "!text-white" : ""
+                      path == "/" && !isScrollApplicable ? "!text-white" : ""
                     }`}
                   />
                 </button>
