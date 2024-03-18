@@ -77,7 +77,7 @@ const Header = () => {
                 <Link href="/">
                   <Image
                     src={`${
-                      path != "/"
+                      path != ""
                         ? "/misc/logo-header.jpg"
                         : "/misc/logo-transparent.png"
                     } `}
