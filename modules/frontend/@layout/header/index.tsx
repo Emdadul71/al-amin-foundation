@@ -77,9 +77,9 @@ const Header = () => {
                 <Link href="/">
                   <Image
                     src={`${
-                      path == "/"
-                        ? "/misc/logo-transparent.png"
-                        : "/misc/logo-header.jpg"
+                      path != "/"
+                        ? "/misc/logo-header.jpg"
+                        : "/misc/logo-transparent.png"
                     } `}
                     alt="Logo"
                     width={isScrollApplicable ? 132 : 240}
