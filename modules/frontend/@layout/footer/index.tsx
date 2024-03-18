@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <section className="mt-auto bg-[#1D1D1B] pb-0">
       <div className="container">
-        <div className="grid lg:grid-cols-[1fr_1.8fr] items-center gap-8 lg:gap-[120px] py-5 lg:py-[50px]">
+        <div className="grid lg:grid-cols-[1fr_1.8fr] items-center gap-8 lg:gap-[120px] py-5 lg:pb-[50px] pt-5 lg:pt-[80px]">
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image

@@ -60,17 +60,22 @@ const HomeHeroCarousel = () => {
                 {data?.map((item) => {
                   return (
                     <CarouselItem key={item?.id}>
-                      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr]  gap-5 lg:gap-10 items-center text-white">
-                        <div className="order-2 md:order-1">
-                          <h1 className="mb-5 heading-two  font-bold text-white text-center md:text-start">
+                      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr]  gap-5 lg:gap-5 items-center text-white">
+                        <div className="order-2 md:order-1 px-3">
+                          <h1 className="mb-5 heading-one  font-bold text-white text-center md:text-start">
                             {item?.headig}
                           </h1>
                           <p className="mb-6 text-center md:text-start">
                             {item?.excerpt}
                           </p>
-                          <div className="flex justify-center w-full">
-                            <Button variant="destructive">
-                              <Link href="#">Donate</Link>
+                          <div className="flex justify-center lg:justify-start w-full">
+                            <Button
+                              variant="destructive"
+                              className="bg-secondary"
+                            >
+                              <Link href="#" className="hover:text-white">
+                                Donate
+                              </Link>
                             </Button>
                           </div>
                         </div>

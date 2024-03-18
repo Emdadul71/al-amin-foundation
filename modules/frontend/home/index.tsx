@@ -4,6 +4,7 @@ import HomeHero from "./@components/home-hero-two";
 import BlogSection from "../@components/blog_section";
 import Testimonials from "../@components/testimonials";
 import HomeHeroCarousel from "./@components/home-hero-carousel";
+import CallToAction from "../@components/call-to-action";
 
 const programsData = [
   { ImgSrc: "/misc/foodbank.jpeg", title: "Food Bank", slug: "#" },
@@ -82,6 +83,7 @@ const Home = () => {
       </section>
       <Testimonials />
       <BlogSection classes={{ root: "pt-5 lg:pt-[80px]" }} />
+      <CallToAction />
     </>
   );
 };
