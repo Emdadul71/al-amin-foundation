@@ -79,13 +79,13 @@ const HomeHeroCarousel = () => {
                             </Button>
                           </div>
                         </div>
-                        <div className="order-1 md:order-2">
+                        <div className="order-1 md:order-2 !rounded-[20px] !lg:rounded-[40px]">
                           <Image
                             src={item?.imageSrc}
                             width={1536}
                             height={880}
                             alt={item?.headig}
-                            className="rounded-[40px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.5)]"
+                            className="rounded-[16px] lg:rounded-[40px] md:shadow-[0px_0px_20px_0px_rgba(0,0,0,0.5)]"
                           />
                         </div>
                       </div>
