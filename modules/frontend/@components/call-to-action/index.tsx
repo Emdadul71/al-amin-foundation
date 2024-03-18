@@ -7,7 +7,7 @@ const CallToAction = () => {
   return (
     <section>
       <div className="container">
-        <div className="grid lg:grid-cols-[496px_1fr] justify-between items-center gap-8 lg:gap-[120px] bg-secondary py-5 lg:py-[45px] px-5 lg:px-[94px] lg:mb-[-140px] z-50 relative rounded-md">
+        <div className="grid lg:grid-cols-[496px_1fr] justify-between items-center gap-8 lg:gap-[120px] bg-secondary py-5 lg:py-[45px] px-5 lg:px-[94px] lg:mb-[-140px] z-10 relative rounded-md">
           <div className="flex flex-col items-center lg:items-start gap-[30px] order-1 lg:order-0">
             <div>
               <h3 className="text-white heading-three mb-3 text-center lg:text-start">
