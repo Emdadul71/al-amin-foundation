@@ -92,10 +92,16 @@ const Header = () => {
               </div>
               <Link
                 href="/"
-                className={`${isScrollApplicable ? "" : "hidden"}`}
+                className={`${isScrollApplicable ? "" : "lg:hidden"}`}
               >
                 <Image
-                  src="/misc/logo-header.jpg"
+                  src={`${
+                    isScrollApplicable && path != ""
+                      ? "/misc/logo-header.jpg"
+                      : !isScrollApplicable && path != "/"
+                      ? "/misc/logo-header.jpg"
+                      : "/misc/logo-transparent.png"
+                  }`}
                   alt="AL Amin Foundation"
                   width={120}
                   height={50}
