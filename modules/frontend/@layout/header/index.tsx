@@ -76,11 +76,7 @@ const Header = () => {
               <div className={`absolute top-0 left-0 hidden lg:block `}>
                 <Link href="/">
                   <Image
-                    src={`${
-                      path != ""
-                        ? "/misc/logo-header.jpg"
-                        : "/misc/logo-transparent.png"
-                    } `}
+                    src={`"/misc/logo-transparent.png"`}
                     alt="Logo"
                     width={isScrollApplicable ? 132 : 240}
                     height={128}
