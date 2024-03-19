@@ -64,11 +64,7 @@ const EventSection = ({ classes, title }: propTypes) => {
   //   }
   // }, [dataArray]);
   return (
-    <section
-      className={`pt-5 mb-8 lg:mb-[80px]  ${
-        classes?.root ? classes?.root : ""
-      }`}
-    >
+    <section className={`pt-5 mb-8   ${classes?.root ? classes?.root : ""}`}>
       <div className="container">
         <div className="max-w-[700px] mx-auto mb-10">
           <h2 className="text-center text-secondary">{title}</h2>

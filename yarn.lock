@@ -113,9 +113,10 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@formkit/auto-animate@formkit/auto-animate", types@formkit/auto-animate:
+"@formkit/auto-animate@^0.8.1":
   version "0.8.1"
-  resolved "https://codeload.github.com/formkit/auto-animate/tar.gz/fea8c46347947dd302b093d7e12bef41712386e8"
+  resolved "https://registry.yarnpkg.com/@formkit/auto-animate/-/auto-animate-0.8.1.tgz#bcaba2969609ca3a7453eacd42b383a2739dfa35"
+  integrity sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
@@ -3531,6 +3532,10 @@ typed-array-length@^1.0.5:
     has-proto "^1.0.3"
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
+
+types@formkit/auto-animate:
+  version "0.8.1"
+  resolved "https://codeload.github.com/formkit/auto-animate/tar.gz/fea8c46347947dd302b093d7e12bef41712386e8"
 
 typescript@^5:
   version "5.3.3"
