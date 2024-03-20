@@ -32,7 +32,7 @@ const ScholarshipShortDescription = ({ data, points, classes }: propTypes) => {
                 } gap-[30px]`}
               >
                 <div className={`${i % 2 == 1 ? "lg:order-1" : ""}`}>
-                  <h3 className="mb-[15px]">{item?.title}</h3>
+                  <h3 className="mb-[15px] text-secondary">{item?.title}</h3>
                   <p>{item?.description}</p>
                   <ul className="flex flex-col gap-3 list-disc mb-[30px]">
                     {item?.points?.map((item: any, i: any) => {
