@@ -7,7 +7,7 @@ const CallToAction = () => {
   return (
     <section>
       <div className="container">
-        <div className="max-w-[1070px] mx-auto lg:mb-[-150px] z-10 relative">
+        <div className="max-w-[1070px] mx-auto lg:mb-[-120px] z-10 relative">
           <div className="grid lg:grid-cols-[554px_auto] items-center justify-between p-5 lg:p-12 bg-secondary rounded-md ">
             <div>
               <h3 className="text-[28px] text-white mb-[10px]">
